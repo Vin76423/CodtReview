@@ -28,11 +28,9 @@ public abstract class BaseAction {
         showNestedMenu(actions);
         int number = Input.getInt("Выберите действие:");
         UpdateAction action = actions.getActions().get(number);
-
         if (action != null) {
             return action;
         }
-
         System.out.println("Нет такого действия. Повторите ввод.");
         return getUpdateAction(actions);
     }
