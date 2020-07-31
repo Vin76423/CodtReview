@@ -1,4 +1,3 @@
 package org.teachmeskills.project.application.exceptions;
 
-public class StopApplicationException extends Exception {
-}
+public class StopApplicationException extends Exception { }

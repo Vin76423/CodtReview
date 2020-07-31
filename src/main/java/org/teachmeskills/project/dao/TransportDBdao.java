@@ -3,7 +3,6 @@ package org.teachmeskills.project.dao;
 import org.teachmeskills.project.connections.MySqlConnection;
 import org.teachmeskills.project.entitiy.Transport;
 import org.teachmeskills.project.entitiy.TypeTransport;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +29,6 @@ public class TransportDBdao implements TransportDao {
         }
         return transports;
     }
-
 
     @Override
     public List<Transport> getAllTransport() {

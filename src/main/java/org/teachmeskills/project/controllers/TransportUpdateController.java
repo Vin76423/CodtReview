@@ -3,7 +3,6 @@ package org.teachmeskills.project.controllers;
 import org.teachmeskills.project.dao.TransportDBdao;
 import org.teachmeskills.project.dao.TransportDao;
 import org.teachmeskills.project.entitiy.Transport;
-
 import java.util.List;
 
 public class TransportUpdateController implements UpdateController<Transport> {

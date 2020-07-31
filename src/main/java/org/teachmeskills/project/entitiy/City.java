@@ -34,10 +34,6 @@ public class City implements EditableEntity {
 
     public City() { }
 
-
-
-
-
     public String getName() {
         return name;
     }

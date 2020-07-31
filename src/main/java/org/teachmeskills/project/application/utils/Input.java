@@ -1,14 +1,11 @@
 package org.teachmeskills.project.application.utils;
 
 import org.teachmeskills.project.entitiy.TypeTransport;
-
 import java.util.Scanner;
 
 public class Input {
     private static Scanner scanner = new Scanner(System.in);
 
-
-    // int:
     public static int getInt() {
         if (scanner.hasNextInt()) {
             int number = scanner.nextInt();
@@ -24,10 +21,6 @@ public class Input {
         return getInt();
     }
 
-
-
-
-    // double:
     public static double getDouble() {
         if (scanner.hasNextDouble()) {
             double number = scanner.nextDouble();
@@ -43,10 +36,6 @@ public class Input {
         return getDouble();
     }
 
-
-
-
-    // String:
     public static String getString() {
         return scanner.nextLine();
     }
@@ -56,17 +45,12 @@ public class Input {
         return getString();
     }
 
-
-
-
-    // Boolean:
     public static boolean getBoolean() {
         String answer = scanner.nextLine().trim();
         if (!(answer.equals("Yes") || answer.equals("No"))) {
             System.out.println("Не корректный ответ. Повторите ввод.");
             return getBoolean();
         }
-
         return answer.equals("Yes");
     }
 
@@ -75,10 +59,6 @@ public class Input {
         return getBoolean();
     }
 
-
-
-
-    // TypeTransport:
     public static TypeTransport getTypeTransport() {
         System.out.println("Выберите тип транспорта:");
         showTypes();

@@ -2,7 +2,6 @@ package org.teachmeskills.project.dao;
 
 import org.teachmeskills.project.connections.MySqlConnection;
 import org.teachmeskills.project.exceptions.DuplicateUserException;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

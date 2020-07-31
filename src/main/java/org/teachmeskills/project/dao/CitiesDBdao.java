@@ -4,13 +4,11 @@ import org.teachmeskills.project.connections.MySqlConnection;
 import org.teachmeskills.project.entitiy.City;
 import org.teachmeskills.project.exceptions.DuplicateCityException;
 import org.teachmeskills.project.exceptions.NotCityException;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CitiesDBdao implements CitiesDao {
-
     @Override
     public City getCity(String name) throws NotCityException {
         City result = null;
@@ -35,7 +33,6 @@ public class CitiesDBdao implements CitiesDao {
         return result;
     }
 
-
     @Override
     public List<City> getAllCities() {
         List<City> cities = new ArrayList<>();
@@ -58,7 +55,6 @@ public class CitiesDBdao implements CitiesDao {
         return cities;
     }
 
-
     @Override
     public void addCity(City city) {
         try (Connection connection = MySqlConnection.getConnection()) {
@@ -76,7 +72,6 @@ public class CitiesDBdao implements CitiesDao {
         }
     }
 
-
     @Override
     public void removeCity(City city) {
         try (Connection connection = MySqlConnection.getConnection()) {
@@ -88,7 +83,6 @@ public class CitiesDBdao implements CitiesDao {
             e.printStackTrace();
         }
     }
-
 
     @Override
     public void updateCity(City city) {

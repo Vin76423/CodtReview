@@ -16,5 +16,4 @@ public class StopApplicationFromCommonAction implements CommonAction {
     public void action() throws StopApplicationException {
         throw new StopApplicationException();
     }
-
 }

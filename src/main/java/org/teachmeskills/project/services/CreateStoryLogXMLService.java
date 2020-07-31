@@ -49,6 +49,5 @@ public class CreateStoryLogXMLService implements Runnable {
         } catch (JAXBException e) {
             e.printStackTrace();
         }
-
     }
 }

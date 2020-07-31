@@ -2,7 +2,6 @@ package org.teachmeskills.project.dao;
 
 import org.teachmeskills.project.entitiy.City;
 import org.teachmeskills.project.entitiy.Transport;
-
 import java.util.List;
 
 public interface TransportDao {

@@ -11,5 +11,6 @@ public class CheckAccountAction extends BaseAccountAction implements Authorisati
 
     @Override
     public UsersStatus action() throws NotUserException {
-        return authorisationController.getUsersStatus(getUsersLogin(), getUsersPassword()); }
+        return authorisationController.getUsersStatus(getUsersLogin(), getUsersPassword());
+    }
 }

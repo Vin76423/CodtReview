@@ -4,7 +4,6 @@ import org.teachmeskills.project.application.actions.authorisationActions.Author
 import org.teachmeskills.project.application.actions.authorisationActions.CheckAccountAction;
 import org.teachmeskills.project.application.actions.authorisationActions.CreateAccountAction;
 import org.teachmeskills.project.application.actions.authorisationActions.StopApplicationFromAuthorisationAction;
-
 import java.util.HashMap;
 import java.util.Map;
 

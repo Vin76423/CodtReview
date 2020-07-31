@@ -33,10 +33,6 @@ public class QueryOptimalTransport<T> {
 
     public QueryOptimalTransport() { }
 
-
-
-
-
     @XmlAttribute(name = "query_id")
     public int getId() { return id; }
 
@@ -81,9 +77,6 @@ public class QueryOptimalTransport<T> {
     public Transport getCheapestResult() { return cheapestResult; }
 
     public void setCheapestResult(Transport cheapestResult) { this.cheapestResult = cheapestResult; }
-
-
-
 
     public QueryOptimalTransport<City> getCityGenericClone(City fromCity, City toCity) {
         return new QueryOptimalTransport<>(this.id, fromCity, toCity, this.neededQuantityPeople, this.neededQuantityCargo, this.fastestResult, this.cheapestResult);

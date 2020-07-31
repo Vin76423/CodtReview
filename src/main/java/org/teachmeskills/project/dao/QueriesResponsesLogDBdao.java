@@ -5,7 +5,6 @@ import org.teachmeskills.project.entitiy.City;
 import org.teachmeskills.project.entitiy.QueryOptimalTransport;
 import org.teachmeskills.project.entitiy.Transport;
 import org.teachmeskills.project.entitiy.TypeTransport;
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -73,8 +72,6 @@ public class QueriesResponsesLogDBdao implements QueriesResponsesLodDao{
                         TypeTransport.values()[resultSet.getInt("ch_tr_type_id") - 1],
                         resultSet.getInt("ch_tr_price_per_kilometer")
                 );
-
-
                 QueryOptimalTransport<City> query = new QueryOptimalTransport<>(
                         resultSet.getInt("id"),
                         from_city,

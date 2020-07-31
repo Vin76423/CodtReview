@@ -4,7 +4,6 @@ import org.teachmeskills.project.application.actions.Action;
 import org.teachmeskills.project.application.actions.updateActions.*;
 import org.teachmeskills.project.controllers.UpdateController;
 import org.teachmeskills.project.entitiy.EditableEntity;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;

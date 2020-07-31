@@ -1,4 +1,3 @@
 package org.teachmeskills.project.entitiy;
 
-public interface EditableEntity {
-}
+public interface EditableEntity { }

@@ -9,18 +9,12 @@ import org.teachmeskills.project.controllers.FindOptimalTransportController;
 import org.teachmeskills.project.controllers.TransportUpdateController;
 import org.teachmeskills.project.entitiy.EditableEntity;
 import org.teachmeskills.project.entitiy.QueryOptimalTransport;
-
 import java.util.Map;
 
 public abstract class BaseAction {
     protected FindOptimalTransportController findOptimalTransportController = new FindOptimalTransportController();
     protected CitiesUpdateController updateCitiesController = new CitiesUpdateController();
     protected TransportUpdateController transportUpdateController = new TransportUpdateController();
-
-
-
-
-
 
     // These are methods for Actions on EditableEntities :
 

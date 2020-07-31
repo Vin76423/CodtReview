@@ -7,7 +7,6 @@ import org.teachmeskills.project.application.exceptions.StopApplicationException
 import org.teachmeskills.project.application.utils.Input;
 import org.teachmeskills.project.exceptions.DuplicateUserException;
 import org.teachmeskills.project.exceptions.NotUserException;
-
 import java.util.Map;
 
 public class ConsoleApplication {
@@ -20,7 +19,6 @@ public class ConsoleApplication {
 
     private Map<Integer, CommonAction> authorisation() throws StopApplicationException {
         Map<Integer, CommonAction> actionMap;
-
         try {
             actionMap = getAction(ConfigAuthorisationActions.actions).action().getUsersAction();
         } catch (NotUserException e) {
@@ -30,7 +28,6 @@ public class ConsoleApplication {
             System.out.println(e.getMessage());
             return authorisation();
         }
-
         return actionMap;
     }
 
@@ -41,7 +38,6 @@ public class ConsoleApplication {
         } catch (StopApplicationException e) {
             return;
         }
-
         while (true) {
             CommonAction action = getAction(actionMapForUser);
             try {
@@ -51,11 +47,6 @@ public class ConsoleApplication {
             }
         }
     }
-
-
-
-
-
 
     private <T extends Action> void showMenu(Map<Integer, T> actionsByUsersStatus) {
         for (Map.Entry<Integer, T> item : actionsByUsersStatus.entrySet()) {
@@ -67,11 +58,9 @@ public class ConsoleApplication {
         showMenu(actionsByUsersStatus);
         int number = Input.getInt("Выберите действие:");
         T action = actionsByUsersStatus.get(number);
-
         if (action != null) {
             return action;
         }
-
         System.out.println("Нет такого действия. Повторите ввод.");
         return getAction(actionsByUsersStatus);
     }

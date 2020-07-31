@@ -11,5 +11,6 @@ public class CreateAccountAction extends BaseAccountAction implements Authorisat
 
     @Override
     public UsersStatus action() throws DuplicateUserException {
-        return authorisationController.createNewUser(getUsersLogin(), getUsersPassword()); }
+        return authorisationController.createNewUser(getUsersLogin(), getUsersPassword());
+    }
 }

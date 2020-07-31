@@ -4,7 +4,6 @@ import org.teachmeskills.project.dao.CitiesDBdao;
 import org.teachmeskills.project.dao.CitiesDao;
 import org.teachmeskills.project.entitiy.City;
 import org.teachmeskills.project.exceptions.DuplicateCityException;
-
 import java.util.List;
 
 public class CitiesUpdateController implements UpdateController<City> {

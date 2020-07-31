@@ -9,7 +9,6 @@ import org.teachmeskills.project.application.utils.Input;
 import org.teachmeskills.project.entitiy.City;
 
 public class UpdateCitiesAction extends BaseAction implements CommonAction {
-
     @Override
     public String getName() {
         return "Редактировать города";

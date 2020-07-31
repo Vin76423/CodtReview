@@ -8,7 +8,6 @@ import org.teachmeskills.project.entitiy.City;
 import org.teachmeskills.project.entitiy.Transport;
 
 public class UpdateTransportAction extends BaseAction implements CommonAction {
-
     @Override
     public String getName() { return "Редактировать транспорт"; }
 

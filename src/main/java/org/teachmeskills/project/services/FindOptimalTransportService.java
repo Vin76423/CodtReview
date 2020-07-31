@@ -7,12 +7,10 @@ import org.teachmeskills.project.entitiy.QueryOptimalTransport;
 import org.teachmeskills.project.entitiy.Transport;
 import org.teachmeskills.project.entitiy.TypeTransport;
 import org.teachmeskills.project.exceptions.NotOptimalTransportException;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
 import static java.lang.Math.*;
 
 public class FindOptimalTransportService {
@@ -21,9 +19,6 @@ public class FindOptimalTransportService {
 
     public FindOptimalTransportService(QueryOptimalTransport<City> usersUpdateQuery) { this.usersUpdateQuery = usersUpdateQuery; }
 
-
-
-
     public List<String> createListQueryForTransportDB() {
         List<Integer> transportTypeID = new ArrayList<>();
         transportTypeID.add(TypeTransport.LAND_TRANSPORT.getIdType());
@@ -31,12 +26,10 @@ public class FindOptimalTransportService {
             transportTypeID.add(TypeTransport.AIR_TRANSPORT.getIdType());
         if (usersUpdateQuery.getFromCity().getIsHaveSeaport() && usersUpdateQuery.getToCity().getIsHaveSeaport())
             transportTypeID.add(TypeTransport.SEA_TRANSPORT.getIdType());
-
         List<String> sqlQueries = transportTypeID.stream()
                 .map( t -> String.format("SELECT * FROM transport WHERE type_id = %d and quantity_people >= %d and quantity_cargo >= %d",
                         t , usersUpdateQuery.getNeededQuantityPeople(), usersUpdateQuery.getNeededQuantityCargo()))
                 .collect(Collectors.toList());
-
         return sqlQueries;
     }
 
@@ -60,16 +53,9 @@ public class FindOptimalTransportService {
                 getSecondPartLine(fastestTransport, "Самый быстрый") + getSecondPartLine(cheapestTransport, "Самый дешёвый");
     }
 
-
-
-
-
-
-
     private double getDistance() {
         if (!(this.distance == 0.0))
             return this.distance;
-
         double longitude_A = usersUpdateQuery.getFromCity().getLongitude();
         double latitude_A = usersUpdateQuery.getFromCity().getLatitude();
         double longitude_B = usersUpdateQuery.getToCity().getLongitude();

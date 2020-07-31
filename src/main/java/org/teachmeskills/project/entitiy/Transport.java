@@ -46,9 +46,6 @@ public class Transport implements EditableEntity {
 
     public Transport() { }
 
-
-
-
     @XmlTransient
     public int getId() { return id; }
 
